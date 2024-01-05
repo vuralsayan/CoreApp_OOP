@@ -1,0 +1,21 @@
+﻿@model CoreApp_OOP.Entity.Customer
+@{
+    ViewData["Title"] = "UpdateCustomer";
+    Layout = "~/Views/Shared/_CoreLayout.cshtml";
+}
+
+<h1>Müşteri Güncelleme Sayfası</h1>
+
+<form method="post">
+    @Html.Label("Müşteri ID")
+    @Html.TextBoxFor(x => x.CustomerID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Müşteri Adı")
+    @Html.TextBoxFor(x => x.CustomerName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Müşteri Şehri")
+    @Html.TextBoxFor(x => x.CustomerCity, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Müşteri Güncelle</button>
+</form>
+
